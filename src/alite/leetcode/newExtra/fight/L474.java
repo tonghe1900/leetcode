@@ -30,6 +30,8 @@ Thus we can define dp[i][j] stands for max number of str can we pick from strs w
  For each str, assume it has a "0"s and b "1"s, we update the dp array iteratively and set dp[i][j] = Math.max(dp[i][j], dp[i - a][j - b] + 1). So and the end, dp[m][n] is the answer.
     dp[k][i][j] = max(dp[k-1][i][j], dp[k-1][i-count[0]][j-count[1]])  
     
+    
+    
     public static int findMaxForm(String[] strs, int m, int n) {
         int[][] dp = new int[m + 1][n + 1];
         for (String str : strs) {
